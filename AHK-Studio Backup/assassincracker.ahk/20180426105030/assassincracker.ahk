@@ -3,10 +3,10 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 	
-^Numpad0::
+^l::
 	;WinGetText text, A
 	;MsgBox %text%
-	ExitApp 0
+	ExitApp
 return
 
 ^m::
@@ -67,12 +67,11 @@ return
 			`n
 			%boof%
 			), found.txt
-			resultant := "found it" + "`n" + %accountnumber% + "`n" + %boof%
-			MsgBox, Ok, Result, %resultant%
+			MsgBox found it!
 			Break
 		}
 		start++
-		Sleep 50
+		Sleep 25
 		Send `b`b`b`b
 	}
 	}

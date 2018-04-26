@@ -72,7 +72,7 @@ return
 			Break
 		}
 		start++
-		Sleep 50
+		Sleep 25
 		Send `b`b`b`b
 	}
 	}
