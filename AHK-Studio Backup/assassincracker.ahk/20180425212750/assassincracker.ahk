@@ -6,29 +6,25 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 ^m::
 	start=2060000000
 	finish=2069999999
-	Loop 30
+	Loop %finish%
 	{
 		Send %start%
 		MouseClick Left, 700, 800, 1, 0
+		start++
 		Sleep 800
-		WinGetText text, A
-		IfInString text, Login
-		{
-			Send `n
-		}
-		else IfInString text, #!/login{
-			
-		}
 		Send `n
 		MouseClick Left, 700, 300, 2, 0
-		start++
-		Send `b`b`b`b`b`b`b`b`b`b
+		Send `b
 	}
 return
 	
 ^l::
 	WinGetText text, A
-	MsgBox %text%
+	MsgBox text
+	IfInString text, "Login"
+	{
+		MsgBox "itworked!"
+	}
 return
 
 ^n::
