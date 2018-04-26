@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<cexml>
+	<files>
+		<main file="G:\Github\autohotkeystuff\AHKDepot\assassincracker.ahk" id="1">
+			<file dir="G:\Github\autohotkeystuff\AHKDepot" ext="ahk" file="G:\Github\autohotkeystuff\AHKDepot\assassincracker.ahk" filename="assassincracker.ahk" id="2" lang="ahk" lower="g:\github\autohotkeystuff\ahkdepot\assassincracker.ahk" nne="assassincracker" type="File" time="20180425220635" encoding="CP1252">
+				<info text="^m" type="Hotkey" upper="^M"></info>
+				<info text="^l" type="Hotkey" upper="^L"></info>
+				<info text="^n" type="Hotkey" upper="^N"></info></file>
+			<header type="Hotkey"></header></main>
+	</files>
+</cexml>

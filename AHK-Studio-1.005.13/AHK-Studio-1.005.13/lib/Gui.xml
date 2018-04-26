@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<gui>
+	<win win="1" pos="x138 y-308 w1246 h692" max="1">
+		<control h="628" w="1285" x="0" y="0" type="Scintilla" file="G:\Github\autohotkeystuff\AHKDepot\assassincracker.ahk" hwnd="2" ra="3" ba="5" last="1"></control>
+		<control h="354" w="315" x="1285" y="0" lp="0.803125" type="Project Explorer" hwnd="3" ba="4"></control>
+		<control h="429" w="315" x="1285" y="354" lp="0.803125" tp="0.45198464" type="Code Explorer" hwnd="4"></control>
+		<control hwnd="5" type="Debug" h="155" w="1285" x="0" y="628" tp="0.80153649" ra="4"></control></win>
+</gui>
