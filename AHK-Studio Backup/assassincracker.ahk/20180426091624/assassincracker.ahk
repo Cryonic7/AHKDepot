@@ -42,8 +42,6 @@ return
 			FileAppend 
 			(
 			`n
-			%accountnumber%
-			`n
 			%boof%
 			), found.txt
 			MsgBox found it!

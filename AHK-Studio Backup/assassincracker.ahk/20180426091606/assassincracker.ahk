@@ -11,7 +11,6 @@ return
 ^m::
 	start=8500
 	finish=9999
-	InputBox accountnumber, "Phone number prompt", "What number do you want to crack?"
 	Loop %finish%
 	{
 		if start < 10
@@ -41,8 +40,6 @@ return
 			boof := start - 1
 			FileAppend 
 			(
-			`n
-			%accountnumber%
 			`n
 			%boof%
 			), found.txt

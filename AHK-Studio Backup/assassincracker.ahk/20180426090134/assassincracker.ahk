@@ -9,9 +9,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 return
 
 ^m::
-	start=8500
+	start=8000
 	finish=9999
-	InputBox accountnumber, "Phone number prompt", "What number do you want to crack?"
 	Loop %finish%
 	{
 		if start < 10
@@ -34,18 +33,11 @@ return
 		{
 			Exit 0
 		}
-		needle := "player"
+		
 		WinGetText text, A
-		if InStr(text, needle)
+		if InStr(text, player)
 		{
-			boof := start - 1
-			FileAppend 
-			(
-			`n
-			%accountnumber%
-			`n
-			%boof%
-			), found.txt
+			FileAppend %start%, found.txt
 			MsgBox found it!
 			Break
 		}
